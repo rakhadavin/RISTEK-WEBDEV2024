@@ -1,0 +1,392 @@
+.home-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-container{
+    background-color: rgba(20, 40, 73, 1);
+    width: 100%;
+    height: 80px;
+ 
+}
+.navbar{
+
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    /* border: 2px solid red; */
+    width:max-content ;
+    padding: 10px;
+    font-size: 50px;
+    color: floralwhite;
+    font-family: "IM Fell Great Primer SC", serif;
+}
+
+.menus{
+text-decoration: none;
+display: flex;
+gap: 30px;
+margin-right:25%;
+margin-left:25%;
+letter-spacing: 3px;
+width: 100%;
+}
+
+.menu{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    transition: 0.5s;
+    letter-spacing: 1px;
+   
+}
+
+.menu:hover{
+    position: relative;
+    padding: 0px;
+    color: rgb(235, 166, 56);
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(214, 145, 35, 1);
+    transition: 0.5s;
+    letter-spacing: 2px;
+
+
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 100px;
+    font-size: 40px;
+}
+
+.profile-btn{
+    font-size: 20px;
+    border: solid transparent;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgb(12, 123, 57);
+    color: white;
+}
+
+.user-logo{
+color: rgb(255, 255, 255);
+/* border: 1px solid red; */
+margin-right: 10px;
+}
+
+
+.opening{
+    background-image: url("https://i.pinimg.com/564x/ad/68/8d/ad688dd23a951bf0b90cbfbb57cef0e2.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* filter: blur(2px); */
+}
+
+
+.opening-overlay{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(19, 47, 92, 0.68);
+
+}
+
+.content{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-direction: row;
+
+}
+.section1{
+    border: 1px solid red;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+ .opening-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    height: 115px;
+
+ }
+.section1-content{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+}
+.greetings{
+
+    font-family: "Alegreya", serif;
+    color: rgb(255, 174, 45);
+    font-weight: 300;
+    font-size: 25px;
+    margin: 0px;
+    position: absolute;
+    margin-bottom: 100px;
+    padding-left: 5px;
+    letter-spacing: 5px;
+}
+.logo-text{
+
+    font-family: "IM Fell Great Primer SC", serif;
+    color: white;
+    font-size: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+
+}
+
+.description-box{
+    margin: 10px;
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 100px;
+    line-height: 23px;
+    letter-spacing: 4px;
+    font-weight: 200;
+    
+}
+.description{
+    position: relative;
+    font-family: "Anek Bangla", sans-serif;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    gap: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.owner-quotes{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: row;
+    /* border: 1px solid white; */
+    border-radius: 15px;
+    background-image: linear-gradient(45deg,rgba(97, 60, 41, 1),rgba(30, 10, 2, 1));
+
+
+}
+
+.image-owner{
+    margin-left: 2px;
+    margin-right: 3px;
+    margin-top: 3px;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.quotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 2rem;
+    text-align: justify;
+    text-align: center;
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+    font-family: "Anek Bangla", sans-serif;
+    font-weight: 200;
+
+}
+.owner-name{
+    font-weight: 400;
+}
+
+.login-text{
+    font-family: "Crimson Pro", serif;
+    font-size: 50px;
+}
+
+.section2-content{
+    margin-right: 15px;
+}
+
+.login-box{
+    width: 120%;
+    height: 100%;
+    background-image: linear-gradient(-45deg,rgba(156, 77, 5, 1),rgba(255, 192, 55, 1));
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-input{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+}
+.input-login{
+    background-color: rgb(67, 67, 67);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 28px;
+    font-family: "Anek Bangla", sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    width: 80%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border: solid transparent;
+
+}
+.input-login:focus{
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 28px;
+    font-family: "Anek Bangla", sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    border: 1px solid white;
+    border: solid transparent;
+
+}
+
+.submit-btn{
+    background-color: rgba(20, 34, 76, 1);
+    font-family: "Anek Bangla", sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    border: 0px solid rgb(223, 223, 223);
+    border-radius: 15px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    
+}
+
+.create-account-text{
+    color: white;
+    font-size: 30px;
+}
+
+.create-account-text > a{
+    color: rgb(7, 41, 75);
+}
+
+
+/* CSS */
+.button-21 {
+  appearance: button;
+  background-color: rgba(20, 34, 76, 1);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  width: 30%;
+  margin-bottom:16px ;
+  margin-top: 16px;
+
+}
+
+.button-21:after {
+  background-clip: padding-box;
+  background-color: rgba(20, 34, 76, 1);
+
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-21:main,
+.button-21:focus {
+  user-select: auto;
+}
+
+.button-21:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.5);
+}
+
+.button-21:disabled {
+  cursor: auto;
+}
+
+.button-21:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+
+

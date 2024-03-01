@@ -1,0 +1,154 @@
+.myJournal-container{
+    background-image: linear-gradient(0deg,rgb(5, 31, 50),rgb(71, 123, 154));
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.journal-text-container{
+    
+    color: white ;
+    font-family: "Domine", serif;
+    letter-spacing: 10px;
+    font-size: 80px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+
+
+.dropdown-container{
+    border: 1px solid red;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: "Anek Bangla", sans-serif;
+
+}
+
+.category-item-record{
+    
+    font-family: "Anek Bangla", sans-serif;
+    width: 10%;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 5px;
+    border-radius: 18px;
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 9px;
+    padding-left: 9px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #a7a7a7;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(62, 62, 62);
+}
+
+.dropdown-menu {
+    cursor:pointer;
+    background-color: #f7b928;
+
+}
+.record-box{
+    
+
+    border:1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    font-family: "Anek Bangla", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: rgba(240, 240, 240, 1)
+
+}
+.record-content-container{
+    border: 2px solid rgb(33, 8, 8);
+    margin:10px;
+    height: 100%;
+    width: 80%;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+
+    
+    
+}
+
+
+.icon-record{
+    border: 1px solid red;
+    order:1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.record-description-box{
+
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+}
+.status-box{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+    align-items: center;
+    gap: 0px;
+}
+
+.record-amount-box{
+    border: 1px solid red;
+    
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding: 0px;
+
+
+}
+
+.date-box{
+    border: 1px solid red;
+
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-items: center;
+    align-items: center;
+    margin: 0px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+}
+
+.icon-img{
+    width: 40%;
+    border-radius: 20px;
+}
+
+

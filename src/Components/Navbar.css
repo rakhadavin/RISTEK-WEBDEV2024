@@ -1,0 +1,84 @@
+
+.navbar-container{
+    background-color: rgba(20, 40, 73, 1);
+    width: 100%;
+    height: 80px;
+ 
+}
+.navbar{
+
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    /* border: 2px solid red; */
+    width:max-content ;
+    padding: 10px;
+    font-size: 50px;
+    color: floralwhite;
+    font-family: "IM Fell Great Primer SC", serif;
+}
+
+.menus{
+text-decoration: none;
+display: flex;
+gap: 30px;
+margin-right:25%;
+margin-left:25%;
+letter-spacing: 3px;
+width: 100%;
+}
+
+.menu{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    transition: 0.5s;
+    letter-spacing: 1px;
+   
+}
+
+.menu:hover{
+    position: relative;
+    padding: 0px;
+    color: rgb(235, 166, 56);
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(214, 145, 35, 1);
+    transition: 0.5s;
+    letter-spacing: 2px;
+
+
+}
+
+.profile{
+    margin: 10px;
+    width: 100px;
+}
+
+.profile-none{
+    display: none;
+}
+.user-logo{
+color: white;
+/* border: 1px solid red; */
+margin-right: 10px;
+}
+
+.logout-btn {
+    background-image: linear-gradient(45deg, #0d5586, #193c57);
+    border-radius: 16px;
+
+    font-family: "Nunito Sans", sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
