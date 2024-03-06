@@ -11,7 +11,7 @@ import {Toaster,toast} from 'react-hot-toast'
 
 // import Button from 'react-bootstrap/Button';
 const Home = () => {
-    const baseURL = "http://localhost:3002"
+    const baseURL = process.env.BACKEND_URL
     const {user} = useSelector((state)=>state)
     const [fields, setValue] = useState({username:"",pass:""})
     const [userData,setUser] = useState("")

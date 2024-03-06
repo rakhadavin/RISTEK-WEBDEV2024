@@ -12,7 +12,8 @@ import { getUser } from '../utils/user';
 const HomeUser = ()=>{
     const {user} = useSelector((state)=>state)
     const [userLogin, setUser]= useState("")
-    const baseURL = "http://localhost:3002"
+    const baseURL = process.env.BACKEND_URL
+
 
     const cekRecord = async ()=>{
         const userData = window.localStorage.getItem("USER");

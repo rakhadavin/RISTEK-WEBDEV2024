@@ -18,7 +18,7 @@ export const Profile = ()=>{
     const [fields, fillFields] = useState({name:"",username:"",balance:"",link_image:""}) 
 
 
-    const baseURL = "http://localhost:3002"
+    const baseURL = process.env.BACKEND_URL
 
     const handleChange = (e)=>{
         const id = e.target.name

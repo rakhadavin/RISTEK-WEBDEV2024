@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 export const Register = ()=>{
-    const baseURL = "http://localhost:3002"
+    const baseURL = process.env.BACKEND_URL
+
     const navigateTo = useNavigate()
     const [fields,setValue] = useState({name:"John",username:"John@gmail,com",pass:"John Doe",balance:0})
     const [name,setName] = useState("")

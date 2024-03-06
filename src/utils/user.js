@@ -1,7 +1,8 @@
 import axios from "axios"
 
 export const getUser = async()=>{
-    const baseURL = "http://localhost:3002"
+    const baseURL = process.env.BACKEND_URL
+
     const userData = window.localStorage.getItem("USER");
     console.log("USER DATA : ",userData)
     const response = await axios.get(`${baseURL}/user`)

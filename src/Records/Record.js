@@ -15,7 +15,7 @@ const Record = ()=>{
 const [input,setValue] = useState({desc:"",category:"income",amount:0, date:""})
 const [category, setCategory] = useState("all")
 const {user} = useSelector((state)=>state)
-const baseURL = "http://localhost:3002"
+const baseURL = process.env.BACKEND_URL
 const  navigateTo = useNavigate()
 
 const inputHandler = async (e)=>{
