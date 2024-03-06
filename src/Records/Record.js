@@ -1,10 +1,13 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import axios from "axios"
 import "./Record.css"
-import { Description } from '@mui/icons-material'
+import { Description, RepeatOnOutlined } from '@mui/icons-material'
 import { useNavigate } from "react-router-dom";
 import {useSelector,useDispatch} from 'react-redux';
 import { setUserLogin } from '../Redux/Slice';
+import { getUser } from '../utils/user';
+import {Toaster,toast} from 'react-hot-toast'
+
 
 
 const Record = ()=>{
@@ -15,7 +18,9 @@ const {user} = useSelector((state)=>state)
 const baseURL = "http://localhost:3002"
 const  navigateTo = useNavigate()
 
-const inputHandler = (e)=>{
+const inputHandler = async (e)=>{
+   
+    
     var id =   e.target.name
     var value = e.target.value
     if(id === "date"){
@@ -32,18 +37,18 @@ const inputHandler = (e)=>{
 
 
 const submitHandler = async ()=>{
-    console.log(user.data)
-    var userId = user.data.detail.id
-    console.log(userId) 
+    const userData = await getUser()
+    const userID = userData.id
     var data = {
 
         description:input.desc,
         category : input.category,
         amount : input.amount,
         date : input.date,
-        userId : userId
+        user_id : userID
     }
-    console.log(data)
+
+    
     const option = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -51,8 +56,23 @@ const submitHandler = async ()=>{
         mode: 'cors'
 
     };
+    const update_amount_opt = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            id : userID,
+            amount : input.amount,
+            category : input.category
+        }),
+        mode: 'cors'
+
+    };
     const  res = await fetch(`${baseURL}/user-record`,option)
-    console.log(res)
+  
+    const  res2 = await fetch(`${baseURL}/update-amount/${userID}`,update_amount_opt)
+
+
+    toast.success('Successfully Created New Record!' )
     navigateTo("/home")
 }
 

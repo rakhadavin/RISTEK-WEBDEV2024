@@ -6,6 +6,8 @@ import Navbar from '../Components/Navbar';
 import { useNavigate } from "react-router-dom";
 import {useSelector,useDispatch} from 'react-redux';
 import { setUserLogin } from '../Redux/Slice';
+import {Toaster,toast} from 'react-hot-toast'
+
 
 // import Button from 'react-bootstrap/Button';
 const Home = () => {
@@ -27,6 +29,9 @@ const Home = () => {
         setUserTarget(userTarget)
         console.log(userTarget)
         console.log(daftarUser.find(obj => obj.username == fields.username))
+        window.localStorage.setItem("USER",JSON.stringify(userData));
+        console.log("ini loacal : ",window.localStorage.getItem("USER"))
+        console.log(userData)
         if(userTarget == undefined){
             console.log("Username or Password Wrong !")
         }else{
@@ -56,7 +61,7 @@ const Home = () => {
 
     const login = async () =>{
         getUser()
-        console.log(userData)
+        console.log("salah")
         if (fields.pass === userData.password ){
             console.log("Berhasil Login")
             dispatch(setUserLogin({
@@ -65,17 +70,40 @@ const Home = () => {
                 
             }))
             console.log(userData)
+            toast.success('Login Successfully !.', {
+                style: {
+                  border: '1px solid #713200',
+                  padding: '16px',
+                  color: '#713200',
+                },
+                iconTheme: {
+                  primary: '#713200',
+                  secondary: '#FFFAEE',
+                },
+              });
            
             navigateTo("/home")
         }else{
-            console.log("Username or Password in correct !")
+            toast.error("Username or Password Is Incorret !")
+
         }
     }
 
 
     return (
         <div className="home-page">
-            <Navbar />
+           
+        <div className="navbar-container">
+        <div className="navbar">
+            <div className="logo">MyFinance</div>
+            <div className="menus">
+                <a className="menu Home" href='/'>Home</a>
+                <a href="/" className="menu MyJournal">MyJournal</a>
+                <a href="" className="menu About">About</a>
+                <a href="" className="menu Contact-us">Contact Us</a>
+            </div>
+        </div>
+    </div>
           
 
             <div className="opening">
@@ -129,10 +157,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
-                    <div className="grafik">
-                    </div>
-
+                        
+                    
 
 
 
@@ -140,6 +166,52 @@ const Home = () => {
 
             </div>
 
+
+            <div className="benefit">
+                <div className="cover">
+                    <div className="benefit-text">Only For You !</div>
+                    <div className="content-benefit">
+                        <div ><img src="/Assets/Benefits/Card.png" alt="" className="b1"/></div>
+                        <div ><img src="/Assets/Benefits/Card2.png" alt="" className="b2"/></div>
+                        <div ><img src="/Assets/Benefits/Card3.png" alt="" className="b3"/></div>
+                    </div>
+                    <div className="caption">Take charge of your finances going forward!</div>
+                </div>
+            </div>
+
+            <div className="about-box">
+                <div className="logo-about-box">
+                    <div className="logo-text-about">MyFinance</div>
+                    <div className="desc-about">Access current information about your </div>
+                    <div className="desc-about">income, expenses, and balance with ease.</div>
+                </div>
+                <div className="developer-box">
+                    <div className="developer-text">Meet Our Developer !</div>
+                    <div >
+                        <img src="Assets/Owner/Davin.jpg" alt=""  className="my-img"/>
+                    </div>
+                    <div className="identity">
+                        <div className="name">Rakha Davin Bani Alamsyah</div>
+                        <div className="major">Information System</div>
+                    </div>
+                </div>
+                <div className="contact-box">
+                <a className="instagram" href='https://www.instagram.com/rakha.davin_alamsyah?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>
+                    <img src="Assets/Contact/insatgram.png" alt="" className="instagram-logo logo-contact" />
+                    <div className="instagram-account">rakha.davin_alamsyah</div>
+                </a>
+                <a className="linkedin" href='https://www.linkedin.com/in/rakha-davin-bani-alamsyah-0b038a262/'>
+                <img src="Assets/Contact/linkedin.png" alt="" className="linkedin-logo logo-contact" />
+                    <div className="linkdin-account">Rakha Davin Bani Alamsyah</div>
+                </a>
+                <a className="line" href='https://line.me/ti/p/4G5cZfi6s4'>
+                    <img src="Assets/Contact/line.png" alt="" className="line-logo logo-contact" />
+                    <div className="line-account">rakdav</div>
+                </a>
+
+                </div>
+
+            </div>
 
 
         </div>
