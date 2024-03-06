@@ -69,7 +69,6 @@ export const Register = ()=>{
             <input type="number" name = "balance" placeholder='Balance'className='input-register' onChange={getValue}/>
             <div className="button-act">
                 <a className='direct-link submit-btn button-submit' onClick={submitForm}>SUBMIT</a>
-                <button onClick={submitForm}>CEK DULU</button>
                 <a href='/' className='direct-link back-btn back-button-19'>Back</a>
             </div>
         </div>

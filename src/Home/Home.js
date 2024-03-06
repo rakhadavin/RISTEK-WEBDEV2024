@@ -146,7 +146,6 @@ const Home = () => {
                                 </div>
                                 <div className="submit-place">
                                     <button class="button-21" role="button" onClick={login}>Submit</button>
-                                    <button class="button-21" role="button" onClick={getUser}>cek redux</button>
 
                                 </div>
                                 <div className="create-account-text">
