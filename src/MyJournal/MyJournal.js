@@ -14,7 +14,8 @@ import { Link } from 'react-router-dom';
 export const MyJournal = () => {
     const [records,setRecord] =useState([])
     const category =useRef("all")
-    const baseURL = process.env.BACKEND_URL
+    const baseURL = process.env.REACT_APP_BACKEND_URL
+
     const {user} = useSelector((state)=>state)
 
     const getRecords = async()=>{   

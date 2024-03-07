@@ -12,7 +12,8 @@ import { getUser } from '../utils/user';
 const HomeUser = ()=>{
     const {user} = useSelector((state)=>state)
     const [userLogin, setUser]= useState("")
-    const baseURL = process.env.BACKEND_URL
+    const baseURL = process.env.REACT_APP_BACKEND_URL
+
 
 
     const cekRecord = async ()=>{

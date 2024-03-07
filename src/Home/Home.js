@@ -11,7 +11,7 @@ import {Toaster,toast} from 'react-hot-toast'
 
 // import Button from 'react-bootstrap/Button';
 const Home = () => {
-    const baseURL = process.env.BACKEND_URL
+    const baseURL = "https://myfinance-backend.up.railway.app"
     const {user} = useSelector((state)=>state)
     const [fields, setValue] = useState({username:"",pass:""})
     const [userData,setUser] = useState("")
@@ -19,16 +19,13 @@ const Home = () => {
     const navigateTo = useNavigate()
     const dispatch = useDispatch()
 
-    const getUser = async () => {
-        console.log(user.data)
-        const response = await axios.get(`${baseURL}/user`)
+    const getUsers = async () => {
+        const response = await fetch(`${baseURL}/user`)
+        console.log("url : ",baseURL)
+        console.log(response)
         var daftarUser = response.data.payload.data;
-        console.log(daftarUser)
-        console.log(daftarUser.find(obj => obj.username == fields.username))
         var userTarget = daftarUser.find(obj => obj.username === fields.username)
         setUserTarget(userTarget)
-        console.log(userTarget)
-        console.log(daftarUser.find(obj => obj.username == fields.username))
         window.localStorage.setItem("USER",JSON.stringify(userData));
         console.log("ini loacal : ",window.localStorage.getItem("USER"))
         console.log(userData)
@@ -60,8 +57,7 @@ const Home = () => {
     }
 
     const login = async () =>{
-        getUser()
-        console.log("salah")
+        getUsers()
         if (fields.pass === userData.password ){
             console.log("Berhasil Login")
             dispatch(setUserLogin({
@@ -84,6 +80,8 @@ const Home = () => {
            
             navigateTo("/home")
         }else{
+            console.log("salah")
+
             toast.error("Username or Password Is Incorret !")
 
         }

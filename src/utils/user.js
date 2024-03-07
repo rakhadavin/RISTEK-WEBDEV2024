@@ -1,7 +1,8 @@
 import axios from "axios"
 
 export const getUser = async()=>{
-    const baseURL = process.env.BACKEND_URL
+    const baseURL = process.env.REACT_APP_BACKEND_URL
+
 
     const userData = window.localStorage.getItem("USER");
     console.log("USER DATA : ",userData)
